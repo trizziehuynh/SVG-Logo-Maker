@@ -1,4 +1,6 @@
 const inquier = require("inquirer");
+const { Circle, Triangle, Square } = require("./lib/shapes");
+const { writeFile } = require("fs/promises");
 
 inquier
   .prompt([
@@ -43,13 +45,24 @@ inquier
     return writeFile("logo.svg", svg.render());
   })
   .then(() => console.log("The logo is created."))
-  .catch((error)=>{
+  .catch((error) => {
     console.log(error);
-    console.log("Error!")
+    console.log("Error!");
   });
 
-  class SVG{
-    constructor(){
-      
-    }
+// Creating class SVG
+class SVG {
+  constructor() {
+    this.textElement = "";
+    this.shapeElement = "";
   }
+  render() {
+    return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${this.shapeElement}${this.textElement}</svg>`;
+  }
+  setText(text, color) {
+    this.textElement = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${message}</text>`;
+  }
+  setShape(shape) {
+    this.shapeElement = shape.render();
+  }
+}
