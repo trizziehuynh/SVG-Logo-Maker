@@ -33,5 +33,7 @@ THEN I am taken to the corresponding section of the README
 
 [SVG Examples](./examples/)
 
-![Figure: Sample](./img/sampleImg.png)
+![Figure 1: Command Line Application](./img/Command%20Line%20App.png)
+
+![Figure 2: Sample](./img/sampleImg.png)
 
