@@ -27,7 +27,7 @@ THEN I am taken to the corresponding section of the README
 
 ## Demo
 
-[Walk Through Video](link)
+[Walk Through Video](https://drive.google.com/file/d/1ybwch5Fl7QShTPycoNMLEBd8-4C-fSsO/view)
 
 [Application Index](index.js)
 
