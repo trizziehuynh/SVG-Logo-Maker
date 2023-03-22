@@ -23,7 +23,7 @@ inquier
     {
       type: "input",
       name: "shapeColor",
-      message: "Enter a color keyword for the text (OR a hexadecimal number)",
+      message: "Enter a color keyword for the shape (OR a hexadecimal number)",
     },
   ])
   .then(({ text, textColor, shape, shapeColor }) => {
@@ -34,7 +34,7 @@ inquier
     } else if (shape == "Triangle") {
       userShape = new Triangle();
     } else {
-      userShape = new Triangle();
+      userShape = new Square();
     }
 
     userShape.setColor(shapeColor);
@@ -60,7 +60,7 @@ class SVG {
     return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${this.shapeElement}${this.textElement}</svg>`;
   }
   setText(text, color) {
-    this.textElement = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${message}</text>`;
+    this.textElement = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`;
   }
   setShape(shape) {
     this.shapeElement = shape.render();
